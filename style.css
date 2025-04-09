@@ -1,0 +1,35 @@
+body{
+    min-height:100vh;
+    overflow: hidden;
+    cursor:crosshair;
+}
+
+.style{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bubble{
+    position:absolute;
+    border-radius: 300px;
+    background-color: rgba(255,160,140,5);
+    opacity: 0;
+    animation : anim 8s;
+    filter:hue-rotate(0deg);
+
+}
+
+.bubble-not{
+    visibility: hidden;
+}
+
+@keyframes anim {
+    to{
+        top:-500px;
+        left:-500px;
+        right:-500px;
+        bottom:-500px;
+        opacity:1;
+        filter:hue-rotate(720deg);
+    }
+}
